@@ -1,0 +1,14 @@
+{
+	"default": {
+		"paths": [
+			"features/**/*.feature"
+		],
+		"format": [
+			"progress"
+		],
+		"publishQuiet": true,
+		"formatOptions": {
+			"snippetInterface": "synchronous"
+		}
+	}
+}
