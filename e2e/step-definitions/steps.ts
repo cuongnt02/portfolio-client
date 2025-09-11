@@ -4,18 +4,12 @@ import {
   Before,
   After,
   setDefaultTimeout,
-} from "@cucumber/cucumber";
+} from "@wdio/cucumber-framework";
 import { remote } from "webdriverio";
-import { expect, $ } from "@wdio/globals";
+import { expect, $, $$, browser } from "@wdio/globals";
 
-let browser;
 Before(async () => {
   setDefaultTimeout(5 * 1000);
-  browser = await remote({
-    capabilities: {
-      browserName: "chrome",
-    },
-  });
 });
 
 After(async () => {
@@ -28,32 +22,30 @@ Given("I am on the homepage", async () => {
 });
 
 Then("I should see the portfolio owner's name", async () => {
-  const owner_name = await $('h1="Nguyen Tan Cuong"');
+  const owner_name = await $("aria/Header");
   await expect(owner_name).toHaveText("Nguyen Tan Cuong");
 });
 
 Then("I should see the owner\'s job", async () => {
   const job = await $("aria/Job");
-  await expect(job).toHaveText(expect.stringContaining("Software developer"));
+  await expect(job).toHaveText(expect.stringContaining("Software Developer"));
 });
 
-Then("I should see the title named after the owner", async function () {
-  const title = await $("title");
-  await expect(title).toHaveText("Nguyen Tan Cuong - Home page");
+Then("I should see some brief introduction", async () => {
+  const introduction = await $("aria/Intro");
+  await expect(introduction).toHaveText(expect.stringContaining("journey"));
+});
+
+Then("I should see the title named after the owner", async () => {
+  await expect(browser).toHaveTitle("Nguyen Tan Cuong - Home page");
 });
 
 Then(
   "I should see a navigation menu with Home, My Story, Projects and Contacts",
   async () => {
     const nav_elements = ["Home", "My Story", "Projects", "Contacts"];
-    const items = $("li");
-    items.forEach(async (item) => {
-      await expect(nav_elements).toContains(expect.toHaveText(item));
-    });
+    for await (const item of $("aria/Navigation").$$("li")) {
+      await expect(nav_elements).toContains(item.getText());
+    }
   },
 );
-
-Then("I should see some brief introduction", async () => {
-  const introduction = await $("h2.intro");
-  expect(introduction).toHaveText();
-});

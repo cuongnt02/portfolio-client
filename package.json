@@ -13,8 +13,10 @@
 		"test:browser": "vitest --config=vitest.browser.config.ts"
 	},
 	"dependencies": {
+		"nes.css": "^2.3.0",
 		"react": "^19.1.1",
-		"react-dom": "^19.1.1"
+		"react-dom": "^19.1.1",
+		"webdriverio": "^9.19.2"
 	},
 	"devDependencies": {
 		"@cucumber/cucumber": "^12.2.0",

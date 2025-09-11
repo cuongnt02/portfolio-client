@@ -11,6 +11,8 @@
 		"wdio": "wdio run ./wdio.conf.ts"
 	},
 	"dependencies": {
-		"@wdio/allure-reporter": "^9.19.2"
+		"@cucumber/cucumber": "^12.2.0",
+		"@wdio/allure-reporter": "^9.19.2",
+		"@wdio/globals": "^9.17.0"
 	}
 }
