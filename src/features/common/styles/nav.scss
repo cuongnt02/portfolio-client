@@ -1,0 +1,30 @@
+@import "../../../app/index.css";
+
+nav {
+  margin-bottom: var(--spacing-large);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  li {
+    padding: var(--spacing-small);
+    margin: 0 var(--spacing-large);
+
+    :hover {
+      text-decoration: none;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: var(--spacing-large);
+
+  }
+
+}

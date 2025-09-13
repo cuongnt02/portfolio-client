@@ -13,12 +13,17 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	--spacing-small: 0.5rem;
+	--pacing-regular: 1rem;
+	--spacing-large: 1.5rem;
+	--spacing-xtralarge: 2rem;
+	--spacing-xxlarge: 3rem;
 }
 
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
 }
