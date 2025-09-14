@@ -10,6 +10,7 @@
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"test:feature": "cucumber-js -p default --import features/portfolio/**/*.js",
+		"test:ci": "vitest --config=vitest.browser.ci.config.ts",
 		"test:browser": "vitest --config=vitest.browser.config.ts"
 	},
 	"dependencies": {
