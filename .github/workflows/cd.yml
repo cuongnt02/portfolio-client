@@ -23,4 +23,8 @@ jobs:
           token: ${{ secrets.MAIN_REPO_TOKEN }}
           repository: cuongnt02/portfolio
           event-type: frontend-release
-          client-payload: '{"version": "${{ github.ref_name }}"}'
+          client-payload: |
+            {
+              "version": "${{ github.ref_name }}",
+              "frontend_run_id": "${{ github.run_id }}"
+            }
