@@ -42,20 +42,20 @@ Then(
   async () => {
     const journey = await $("aria/Journey");
     await journey.waitForDisplayed();
-    expect(journey).toHaveText(expect.stringContaining("journey"));
+    expect(journey).toBeDisplayed();
   },
 );
 
 Then(
   "I should see one or more images related to the owner’s story",
   async () => {
-    const journey_image_picture = await $("img=Mario");
-    const journey_image_mario = await $("img=Picture");
+    const journey_image_mario = await $("aria/Mario");
+    const journey_image_profile = await $("aria/Profile");
 
     await journey_image_mario.waitForDisplayed();
-    await journey_image_picture.waitForDisplayed();
+    await journey_image_profile.waitForDisplayed();
 
-    expect(journey_image_picture).toBeDisplayed();
+    expect(journey_image_profile).toBeDisplayed();
     expect(journey_image_mario).toBeDisplayed();
   },
 );

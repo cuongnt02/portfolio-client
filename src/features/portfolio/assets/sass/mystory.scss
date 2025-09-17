@@ -1,0 +1,27 @@
+@import "../../../../app/index.css";
+
+.story-brief {
+  display: flex;
+  flex-direction: row;
+  margin-top: var(--spacing-xtralarge);
+  margin-bottom: var(--spacing-xtralarge);
+
+  .cap {
+    width: 55%;
+    align-self: center;
+    margin-right: var(--spacing-large);
+  }
+
+  figure {
+    width: 40%;
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      margin-top: var(--spacing-regular)
+    }
+  }
+
+}
