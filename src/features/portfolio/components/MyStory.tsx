@@ -2,8 +2,15 @@ import profile from "../assets/images/profile.png"
 import mario from "../assets/images/mario.png"
 
 import "../assets/sass/mystory.scss"
+import { useRef } from "react"
+import { MaintainanceDialog } from "../../common/components/PortfolioDialog"
 
 export default function MyStory() {
+
+	const dialogRef = useRef<HTMLDialogElement>(null)
+	const showDialog = () => {
+		dialogRef.current?.showModal();
+	}
 	return (
 		<section role='alert' aria-label="My Story">
 			<h1 className="nes-text">My Story</h1>
@@ -28,8 +35,8 @@ export default function MyStory() {
 					<figcaption>My first ever game played - I'm bad at it tho</figcaption>
 				</figure>
 			</div>
-			<button className="nes-btn">View Full Story</button>
-
+			<button className="nes-btn" onClick={showDialog} aria-label="View Full Story">View Full Story</button>
+			<MaintainanceDialog ref={dialogRef} />
 
 		</section >
 	)
