@@ -61,7 +61,7 @@ Then(
 );
 
 Then("I should see a link or button to view the full story page", async () => {
-  const view_story_button = await $("button");
+  const view_story_button = await $("aria/View Full Story");
   await view_story_button.waitForDisplayed();
   expect(view_story_button).toBeDisplayed();
 });
