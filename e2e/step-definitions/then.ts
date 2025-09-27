@@ -66,4 +66,36 @@ Then("I should see a link or button to view the full story page", async () => {
   expect(view_story_button).toBeDisplayed();
 });
 
+Then("I should see the owner's brief list of projects", async () => {
+  const project_list = await $("aria/Projects");
+  project_list.waitForDisplayed();
+  expect(project_list).toBeDisplayed();
+});
+
+Then("I should see each project associated with a version", async () => {
+  const project = await $("aria/Project Portfolio");
+  project.waitForDisplayed();
+  expect(project).toBeDisplayed();
+  const version = await $("aria/Project Portfolio - Version");
+  version.waitForDisplayed();
+  expect(version).toBeDisplayed();
+});
+
+Then("I should see each project associated with a build status", async () => {
+  const project = await $("aria/Project Portfolio");
+  project.waitForDisplayed();
+  expect(project).toBeDisplayed();
+  const version = await $("aria/Project Portfolio - Build Status");
+  version.waitForDisplayed();
+  expect(version).toBeDisplayed();
+});
+
+Then("I should see each project linked with a github link", async () => {
+  const project = await $("aria/Project Portfolio");
+  project.waitForDisplayed();
+  expect(project).toBeDisplayed();
+  const version = await $("aria/Project Portfolio - VCS");
+  version.waitForDisplayed();
+  expect(version).toBeDisplayed();
+});
 // TODO: When clicking the button -> navigate

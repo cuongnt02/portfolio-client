@@ -1,6 +1,7 @@
 import { PortfolioNavigation } from "../../common/components/PortfolioNavigation"
 import "../assets/sass/homepage.scss"
 import MyStory from "./MyStory"
+import { Projects } from "./Projects"
 
 export default function HomePage() {
 	return (
@@ -14,6 +15,7 @@ export default function HomePage() {
 					<p className="nes-text" role="alert" aria-label="Intro">Making software is a journey, and my life is to explore the rest of it</p>
 				</section>
 				<MyStory />
+				<Projects />
 
 			</main>
 		</>

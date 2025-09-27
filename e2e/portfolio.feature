@@ -20,13 +20,13 @@ Feature: Portfolio
 				And I should see one or more images related to the owner’s story
 				Then I should see a link or button to view the full story page
 
-		# Scenario: Viewing owner's projects
-		# 		When I scroll down
-		# 		Then I should see the owner's brief list of projects
-		# 		And I should see each project associated with a version
-		# 		And I should see each project associated with a build status
-		# 		And I should see each project linked with a github link
-		#
+		Scenario: Viewing owner's projects
+				When I scroll down
+				Then I should see the owner's brief list of projects
+				And I should see each project associated with a version
+				And I should see each project associated with a build status
+				And I should see each project linked with a github link
+		
 		# Scenario: Viewing technologies & skills
 		# 		When I scroll down
 		# 		Then I should see a section titled "Technologies & Skills"
