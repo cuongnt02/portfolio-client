@@ -35,7 +35,7 @@ export function Projects() {
 	return (
 		<section className="projects-section" role="alert" aria-label="Projects Section">
 			<h1 className="nes-text" aria-label="Projects Section Title">Projects</h1>
-			<p className="nes-text" role="alert" aria-label="Projects Intro">Check out some of my personal projects</p>
+			<p className="nes-text" role="alert" aria-label="Projects Cap">Check out some of my personal projects</p>
 			<ul className="lists" aria-label="Projects List">
 				{projectList}
 			</ul>
