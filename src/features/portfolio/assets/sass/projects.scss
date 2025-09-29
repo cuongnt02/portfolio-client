@@ -1,0 +1,13 @@
+@import "../../../../app/index.css";
+
+.projects-section {
+  h1 {
+    margin: var(--spacing-xxlarge) 0rem;
+  }
+
+  ul {
+    li {
+      margin: var(--spacing-xtralarge) 0;
+    }
+  }
+}

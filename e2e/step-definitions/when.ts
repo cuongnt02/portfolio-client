@@ -7,6 +7,6 @@ When("I scroll down to the story section", async () => {
 });
 
 When("I scroll down to the projects section", async () => {
-  const section = await $("aria/Projects");
+  const section = await $("aria/Projects Section");
   await section.scrollIntoView();
 });

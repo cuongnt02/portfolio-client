@@ -1,0 +1,30 @@
+@import "../../../../app/index.css";
+
+.project-info {
+  margin: auto;
+
+  .project-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .project-data {
+      .release-status {
+        margin-right: var(--spacing-regular)
+      }
+
+      span {
+        font-size: 0.65rem;
+      }
+
+      p {
+        margin-bottom: var(--spacing-small);
+        text-align: left;
+      }
+
+    }
+
+  }
+
+
+}

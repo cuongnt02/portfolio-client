@@ -10,7 +10,7 @@ export function PortfolioNavigation() {
 	return (
 		<nav aria-label="PortfolioNavigation">
 			<ul>
-				<li><a href="#" onClick={showDialog}>Home</a></li>
+				<li><a href="#" >Home</a></li>
 				<li><a href="#" onClick={showDialog}>My Story</a></li>
 				<li><a href="#" onClick={showDialog}>Projects</a></li>
 				<li><a href="#" onClick={showDialog}>Contact</a></li>

@@ -24,7 +24,7 @@ Then(
   "I should see a navigation menu with Home, My Story, Projects and Contacts",
   async () => {
     const nav_elements = ["Home", "My Story", "Projects", "Contact"];
-    for await (const item of $$("li")) {
+    for await (const item of $("nav").$("ul").$$("li")) {
       const item_link = item.$("a");
       const item_text = await item_link.getText();
       await expect(nav_elements).toContain(item_text);

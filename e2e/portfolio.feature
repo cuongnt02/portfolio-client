@@ -21,7 +21,7 @@ Feature: Portfolio
 				Then I should see a link or button to view the full story page
 
 		Scenario: Viewing owner's projects
-				When I scroll down
+				When I scroll down to the projects section
 				Then I should see the owner's brief list of projects
 				And I should see each project associated with a version
 				And I should see each project associated with a build status
