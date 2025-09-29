@@ -23,8 +23,9 @@ const projects: ProjectItemType[] = [
 ]
 
 export function Projects() {
-	const projectList = projects.map(project => {
-		const key = crypto.randomUUID()
+	const projectList = projects.map((project, index) => {
+		// TODO: Figure out why crypto.randomUUID not working on prod build
+		const key = index
 		// TODO: Test all list item 
 		return (
 			<li aria-label={`Projects Item ListItem - ${key}`} key={key}>
