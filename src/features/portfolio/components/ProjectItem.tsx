@@ -1,4 +1,3 @@
-import type ProjectItemType from "../../common/types/project-item"
 import "../assets/sass/project-item.scss"
 
 interface ProjectItemProps {
